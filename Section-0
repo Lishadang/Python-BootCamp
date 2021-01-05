@@ -1,0 +1,35 @@
+Installing Editors on Windows
+
+Editor is the part where we write the code.
+Notebook and pen we have pen to represent items and paper where we output the code.
+
+Something to write,something to run Terminal is used for running the program
+Atom is preferrable for simplicity
+Anaconda 
+Pycharm
+
+Installing python
+Download python from https://www.python.org/
+Check ADD Python 3.7 to PATH
+Install Now
+
+Check by running Command Prompt on Windows and just type python 
+">>>" represents the python shell & its ready to take python commands & code.
+if you want to come out of shell just type exit().
+
+You can perform simple calculations in shell like 3+5,print("hello world")
+
+Why don't on Notepad ??
+We can write but we have efficient text editor and by typing in Notepad its more time consuming process.
+
+Here we are using Atom
+https://atom.io/
+or
+setup provided in the resources folder
+
+Editor is a place where we write code and run at the same place why we called it efficient.
+For connecting terminal
+1). Packages->Settings View->Open->Install->platformio-ide-terminal
+2). apm install platformio-ide-terminal
+3). official website
+
