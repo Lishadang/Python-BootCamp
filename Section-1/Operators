@@ -1,0 +1,39 @@
+1. Arithmetic Operator
+  + "de"+"ck"
+  - "de"-"ck"
+  \
+  * 
+  %
+  //
+  **
+  
+2. Assignment Operator-assigning a value
+  =
+  +=
+  -=
+  *=
+  /=
+  %=
+  **=
+  //=
+  
+3. Comparison Operator
+  ==
+  !=
+  >
+  >=
+  <
+  <=
+  
+4. Logical Operator
+  and(both satisfy) 3 > 2 and 4 > 2
+  or (one satisfy) 3>2 or 2>4
+  not not 3>2
+
+5. Identity Operator 
+  is x is y x=3,y=3
+  is not
+  
+6. Membership Operator
+  in y in x x="water is life" "z" in x
+  not in
