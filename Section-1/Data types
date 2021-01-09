@@ -1,0 +1,48 @@
+Data types
+data is different in every case.
+like for writing we need paper
+  for eating we need food
+  
+  sentence we need words.
+  calculation we need numbers.
+  to find out datatype use type()
+  
+Variables and Constants
+variable is a container for storing data 
+for groceries we need container
+x=5
+x is a container(variable)
+Constants-can't change
+Non-constants(variable)-can change
+
+1. Numbers
+  Operations on Numbers
+  Associativity & Precedence
+  +, -, /, *, power Arithmetic operators
+  
+  Dynamic typing- if we have specified data type cannot store on another datatype its an advantage in python
+  Casting- changing datatype from one to another we can declare explicitly in which datatype we need output
+
+2. Strings-" " set of characters water
+  anything that perform particular task, instead of writing again &again-method or function 
+  lower()
+  dir("string")
+  Indexing & slicing- x[3],x[::-1],x.replace('1','3')
+  Formatting- arranging things in order .format() default,positional,keyword 
+  
+3. List-[] collection data types
+  ["red","blue","green","yellow",3,4.3]
+  dir(list),len(x),pop(),append(),remove("yellow"),del(x)[whole x deleted]
+ 
+4. Tuples-() elements of tuple cannot change else same as list
+  dir(tuple)
+  
+5. Dictionary-{} keys:values
+  {"number":1, "name":"Blue", "age": 23}
+  dir(list),x["year"]=2021,x.pop("age")
+  
+6. Boolean- true false
+  5<6,4<5
+
+  
+ 
