@@ -1,0 +1,10 @@
+datetime.datetime.now()
+x.year
+x.month
+strftime("%B")june
+%A wednesday
+%a wed
+date formatting methods
+
+
+https://docs.python.org/3/library/datetime.html
