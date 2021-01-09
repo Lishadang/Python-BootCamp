@@ -1,0 +1,8 @@
+1. Syntax Error(closing missing)
+2. Indentation Error(alignment)
+3. Type Error(type of data)
+4. Name Error(variable not defined)
+5. Zero division Error
+6. Index Error(index which is not available)
+7. Runtime Error(which do not fall under any error)
+8. Attribute Error(diff method for fiff datatype for which its not available)
