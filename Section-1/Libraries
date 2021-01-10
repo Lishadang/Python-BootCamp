@@ -1,0 +1,13 @@
+import keyword used for importing libraries
+Json
+  format of values return in javascript
+  import json
+  x='{"name":"lisha","age":23}'
+  y=json.dump(x)
+  json.loads(x)
+  print(y)
+  print(y["name"])
+  
+Regex,lambda functions on the internet
+
+https://docs.python.org/3/library/index.html
