@@ -1,0 +1,22 @@
+Opening & Reading
+  file = open/close("filename","r/w/a")
+  x=file.read()
+  print(x)
+  
+Appending(a)
+  file.write("pink")
+  file.close()
+  will also create the file
+  
+Writing(w)
+  if not exist python will create 
+  always need to close the file
+  file.write("ink")
+  completely make the file empty
+  
+Different Methods
+  r+
+  w+
+  a+
+  
+  https://www.tutorialspoint.com/python3/python_files_io.htm
