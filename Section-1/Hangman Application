@@ -1,0 +1,127 @@
+---=[]
+Win
+Reduce the turn
+Figure
+The Figure Die
+
+
+Algorithm
+Develop interface
+Predefined list
+Instruction
+Check the words
+  if right then enter in empty list
+  Then draw figure
+Reduce the turns
+Generate the figure
+
+User Interface
+name = input("Enter your name")
+print("Welcome" , name)
+print("---------------------")
+print("Try to guess the word in less than 10 attempts:")
+hangman()
+print()
+
+List
+import random
+def hangman():
+    word = random.choice(["pugger" , "littlepugger" , "tiger" , "superman" , "thor" , "pokemon" , "avengers" , "savewater" , "earth" , "annable" ])
+
+Instructions
+validLetters = 'abcdefghijklmnopqrstuvwxyz'
+turns = 10
+guessmade = ''
+while len(word) > 0:
+   main = ""
+   missed = 0
+   
+Check the word
+enter word
+check valid or not
+guessmade
+guess
+word main
+main=word then user win
+
+        for letter in word:
+            if letter in guessmade:
+                main = main + letter
+            else:
+                main = main + "_" + " "
+        if main == word:
+            print(main)
+            print("You win!")
+            break
+
+        print("Guess the word:" , main)
+        guess = input()
+        if guess in validLetters:
+            guessmade = guessmade + guess
+        else:
+            print("Enter a valid character")
+            guess = input()
+
+        if guess not in word:
+            turns = turns - 1
+         
+Figure
+            if turns == 9:
+                print("9 turns left")
+                print("  --------  ")
+            if turns == 8:
+                print("8 turns left")
+                print("  --------  ")
+                print("     O      ")
+            if turns == 7:
+                print("7 turns left")
+                print("  --------  ")
+                print("     O      ")
+                print("     |      ")
+            if turns == 6:
+                print("6 turns left")
+                print("  --------  ")
+                print("     O      ")
+                print("     |      ")
+                print("    /       ")
+            if turns == 5:
+                print("5 turns left")
+                print("  --------  ")
+                print("     O      ")
+                print("     |      ")
+                print("    / \     ")
+            if turns == 4:
+                print("4 turns left")
+                print("  --------  ")
+                print("   \ O      ")
+                print("     |      ")
+                print("    / \     ")
+            if turns == 3:
+                print("3 turns left")
+                print("  --------  ")
+                print("   \ O /    ")
+                print("     |      ")
+                print("    / \     ")
+            if turns == 2:
+                print("2 turns left")
+                print("  --------  ")
+                print("   \ O /|   ")
+                print("     |      ")
+                print("    / \     ")
+            if turns == 1:
+                print("1 turns left")
+                print("Last breaths counting, Take care!")
+                print("  --------  ")
+                print("   \ O_|/   ")
+                print("     |      ")
+                print("    / \     ")
+            if turns == 0:
+                print("You loose")
+                print("You let a kind man die")
+                print("  --------  ")
+                print("     O_|    ")
+                print("    /|\      ")
+                print("    / \     ")
+                break
+                
+For entering same word again it will not do something so i think we have to take set instead of using list.
