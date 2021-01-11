@@ -1,0 +1,61 @@
+Library for datasience
+pip install numpy
+or 
+conda install numpy
+Declaring numpy
+  import numpy as np
+  x=[[1,2,3],[4,5,6],[7,8,9]]
+  x
+  y=np.array(x)//2d list
+  y
+Methods for numpy
+  x=[1,2,3,4,5]
+  y=[[1,2,3],[4,5,6],[7,8,9]]
+  y=np.array(x)
+  x.max()
+  x.min()
+  np.random.randn(5)
+  np.random.randint(1,100)
+
+  y=np.array(y)
+  i=j -> square matrix
+  i*j -> order of matrix
+  np.zeroes(3)
+  np.zeroes((3,2))
+  np.zeroes((3,2)) + 5 
+  np.ones((3,4))
+  np.eye(4)//unity matrix
+  np.arange(10)//array
+  np.arange(3,10)
+  np.arange(50).reshape(5,10)
+  np.linespace(0,10,5)
+  np.argmax()//index of max element
+  
+Indexing & slicing
+  x=np.arange(0,21)
+  x[-1]
+  x[:10]
+  x[2:5]
+  x[-10:-1]
+  y=x[5:15]=40
+  y=x.copy()
+Slicing in 2d array
+  x=np.arange(25).reshape(5,5)
+  x[i][j]
+  x[2][2]//12 x[2,2]//12
+  x[4][2]//22
+  x[0:2,2:]
+  y[y>12]
+Operations on numpy
+  x=np.arange(10)
+  y=np.arange(10,20)
+  z=x+y
+  np.sin(x)
+  np.max(x)
+  x=np.arange(12).reshape(3,4)
+  np.arange(10,22).reshape(3,4)
+  numpy.power()
+  x.sum()
+  
+  https://numpy.org/devdocs/
+  
