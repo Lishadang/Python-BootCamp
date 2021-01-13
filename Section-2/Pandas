@@ -1,0 +1,117 @@
+pip install pandas
+or 
+conda install pandas
+To put data in tabular form:
+Series  
+  import numpy as np
+  import pandas as pd
+  x=['a','b','c','d','e']
+  y=[1,2,3,4,5]
+  z={1:'a',2:'b',3:'c',4:'d',5:'e'}
+  pd.Series(x)
+  a=pd.Series(data=x,index=y)
+  type(a)
+  a + b
+  a[:'e']
+  
+Dataframe
+  Frames of series
+  data sharing common index
+  A=[1,2,3,4]
+  B=[5,0,7,6]
+  C=[4,5,7,8]
+  D=[8,9,7,6]
+  E=[8,9,7,6]
+  df=pd.DataFrame([A,B,C,D,E],['a','b','c','d','e'],['W','X','Y','Z'])
+  
+Creating & Deleting Rows &Columns in DataFrame
+  df=pd.DataFrame([A,B,C,D,E],['a','b','c','d','e'],['W','X','Y','Z'])
+  df['P']=df['Y']+df['Z']
+  df.drop('e',inplace=True)//True permanently
+  df.drop('P',axis=1,inplace=True)
+  
+Accessing elements in dataframe
+  df['Y']
+  df.loc['a']
+  df.loc['d','Y']
+  df.iloc[1]
+  
+Conditional Accessing
+  df>3//Boolean 
+  df[df>3]//values
+  df[df['W']>3]['W']
+  
+Missing data
+  np.nan
+  dictionary to DataFrame
+  df =pd.DataFrame(d)
+  df.dropna(axis=0//row 1//column)
+  df.dropna()
+  df.drop(thresh=1)//atleast 1 value present
+  df.fillna(1)
+  df['c].fillna(value=df['b'].mean())
+  
+Analysing data using groupby 
+  import pandas as pd
+  import numpy as np
+  d={'item':['apple','apple','orange','orange','smuggler','smuggler'],'days':['mon','tue','wed','thu','fri','sat'],'sales':[100,80,200,100,10,20]}
+  df = pd.DataFrame(d)
+  x=df.groupby('item')
+  x.mean()
+  x.sum()
+  x.std()
+  x.count()
+  x.max()
+  x.describe()
+  x.describe().transpose()
+  
+Joining
+  import pandas as pd
+  import numpy as np
+  x={'a':[1,2,3],'b':[4,5,6]} 
+  y={'c:[4,2,6],'d':[5,7,8]}
+  x1=pd.DataFrame(x,index=['p1','p2','p3'])
+  y1=pd.DataFrame(y,index=['p1','p2','p3'])
+  x.join(y)
+  x.join(y,how="left") //left,right,inner,outer 
+    bydefault inner
+  
+Concatenating(Done on strings)
+  x={'a':[1,1,1,1,1],'b':[1,1,1,1,1],'c':[1,1,1,1,1],'d':[1,1,1,1,1],'e':[1,1,1,1,1]}
+ 
+  y={'e':[3,3,3,3,3],'f':[3,3,3,3,3],'g':[3,3,3,3,3],'h':[3,3,3,3,3],'i':[3,3,3,3,3]}
+  df1=pd.DataFrame(x,index=[1,2,3,4,5])
+  df2=pd.DataFrame(y,index=[1,2,3,4,5])
+  pd.concat([df1,df2],axis=1)
+  
+Merging
+  df1=pd.DataFrame({'Key':[1,2,3],'a':[2,3,4],'b':[5,6,7]})
+  df2=pd.DataFrame({'Key':[1,2,4],'c':[4,5,6],'d':[5,6,7]})
+  pd.merge([df1,df2])
+  //shift tab
+  pd.merge(df1,df2,how='inner',on='key')
+  
+More Operations
+  .index
+  df1=pd.DataFrame({'Key':[1,2,3],'a':[2,3,4],'b':[5,6,7]})
+  df2=pd.DataFrame({'Key':[1,2,4],'c':[4,5,6],'d':[5,6,7]})
+  df1.columns
+  .unique()//only one time present
+  .nunique()//how much unique values
+  .value_counts()//how many times value occured
+  .isnull()//is there any null True False
+  
+Loading data using pandas
+  json dicts in files
+  csv dataframe in files
+  excel works on server pip install lxml
+  html works on web page pip install html5lib
+  sql sqlolchemy
+  pwd access of the location
+  x =pd.read_csv()/html()
+  ss.load_dataset('tips')
+  
+  
+  https://pandas.pydata.org/pandas-docs/stable/
+  
+  
