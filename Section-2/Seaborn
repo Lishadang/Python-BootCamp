@@ -1,0 +1,85 @@
+pip install seaborn 
+import seaborn as sns
+import numpy as np
+import pandas as pd
+
+diamond=sns.load_dataset('diamonds')
+53940x10
+diamond.head()
+
+Categories of plots
+  1.Point Plot
+    dist=sns.distplot(diamond['price'],kde=False)
+    rug=sns.rugplot(diamond['x'])
+    kde=sns.kdeplot(diamond['price'])
+    
+  2.Distribution plots(hex)
+    tips=sns.load_dataset('tips')
+    tips.head()
+    sns.residplot(x='total bill',y='tip',data=tips)
+    lovess=True
+    sns.jointplot(x='total bill',y='tip',data=tips,kind='kde'/'hex'/'reg',color=#6characters#4CB391)
+    bydefault=scatter
+    
+  Pair Plots
+    dots=sns.load_dataset('dots')
+    dots.head()
+    sns.pairplot(dots, hue = 'choice')
+    tips=sns.load_dataset('tips')
+    tips.head()
+    x=sns.pairplot(tips, hue = 'day')
+    x.map_diag(sns.distplot)//point plot one parameter
+    x.map_upper(sns.kdeplot)
+    
+  3.Categorical plots(Numerical value with Strings)
+    tips=sns.load_dataset('tips')
+    tips.head()
+    sns.countplot(x='day',data=tips)
+    sns.pointplot(x='total_bill',y='day',data=tips)
+    sns.factorplot(x='smoker',y='tip',data=tips,kind='bar'/'box'/'point')
+    sns.swarmplot(x='smoker',y='tip',data=tips,hue='sex',palette='cool'/'magma'/'coolwarm')
+    sns.stripplot(x='smoker',y='tip',data=tips,hue='sex',palette='cool'/'magma'/'coolwarm')
+    
+    For figures
+    tips=sns.load_dataset('tips')
+    tips.head()
+    viloin=sns.violinplot(x='day',y='tip',data=tips,hue='sex')
+    boxplot=sns.boxplot(x='day',y='tip',data=tips,hue='sex')
+    catplot=sns.catplot(x='day',y='tip',data=tips,hue='sex')
+    barplot=sns.barplot(x='day',y='tip',data=tips,hue='sex')[countplot bt here two variables]
+    
+  4.Matrix plots
+    flights=sns.load_dataset('flights')
+    flights.head()
+    tips=sns.load_dataset('tips')
+    tips.head()
+    corr[it lacks the value]
+      tip2=tips.corr()
+      sns.heatmap(tip2, annot=True,linewidths(lw)=10/100/3,linecolor='black',cmap='coolwarm')///annot=valueson box
+      
+    pivot
+      flight2=flights.pivot_table(index='month',columns='year',values='passengers')
+      tips2=tips.pivot_table(index='day',columns='tip',values='total_bill')
+      
+    HeatMap=sns.heatmap(flight2,lw=1,cmap='cool')
+    
+    ClusterMap= sns.clustermap(flight2,cmap='cool')
+    
+  Grids
+    import seaborn as sns
+import numpy as np
+import pandas as pd
+
+%matplotlib inline
+
+tips=sns.load_dataset('tips')
+tips.head()
+sns.countplot(x='smoker',data=tips)
+sns.set_context('paper'/'poster'/'notebook')
+sns.despine(left=True,bottom=True,top=False)
+sns.set_style('darkgrid'/'whitegrid'/'ticks')
+
+
+
+
+https://seaborn.pydata.org/index.html
