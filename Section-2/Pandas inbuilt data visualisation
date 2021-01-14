@@ -1,0 +1,33 @@
+DataFrame
+import pandas as pd
+import seaborn as sns
+import numpy as np
+%matplotlib inline
+
+df1=sns.load_dataset('tips')
+x1=np.random.rand([100,5])
+x2=np.random.rand(10,5)
+df2=pd.DataFrame(x1,columns=['a','b','c','d','e'])
+df3=pd.DataFrame(x2,columns=['a','b','c','d','e'])
+df1.head()
+df2.plot.scatter(x='a',y='b')
+df2.plot.scatter(x='total_bill',y='tip')
+
+#Line Plots
+df2.plot.line()
+df2['a'].plot.line()
+df2.plot.kde()
+df1.plot.density()
+
+#Distribution Plot
+df1.plot.hist()
+df3.hist()
+df3[['a','b']].plot.hist()
+df3.plot.bar()
+df3.plot.area(alpha=0-1)
+df1.plot(kind="hist")
+df3.plot.box()
+df2.plot.hexbin(x='total_bill',y='tip',gridsize=10,cmap='cool')
+
+
+https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html
