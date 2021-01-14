@@ -1,0 +1,44 @@
+pip install plotly
+
+pip install cufflinks
+
+import numpy as np
+import pandas as pd
+%matplotlib inline
+import plotly as pl
+import cufflinks as cf
+import plotly.offline as po
+po.init_notebook_mode(connected=True)
+cf.go_offline()
+df =pd.DataFrame(np.random.rand(100,5), columns = ['a','b','c','d','e'])
+df2 =pd.DataFrame({'x':[3,5,7,8,3],'y':[1,2,3,4,5],'z':[3,5,6,7,8]})
+
+#Point plots
+df.iplot(kind='scatter')
+df.iplot(kind='scatter',x='a',y='b',mode='markers',size=10,symbol='x',colorscale='paired')
+df.scatter_matrix()
+
+#Surface plots
+df2.iplot(kind='surface')
+cf.datagen.sinwave(10,.25).iplot(kind='surface',theme='solar',colorscale='brbg',margin=(0,0,0,0))
+
+#Figure Plots
+import numpy as np
+import pandas as pd
+%matplotlib inline
+import plotly as pl
+import cufflinks as cf
+import plotly.offline as po
+po.init_notebook_mode(connected=True)
+cf.go_offline()
+df =pd.DataFrame(np.random.rand(100,5), columns = ['a','b','c','d','e'])
+df2 =pd.DataFrame({'x':['a','b','c','d','e'],'y':[1,2,3,4,5],'z':[3,5,6,7,8]})
+df.sum().iplot(kind='box')
+df2.iplot(kind='bar',x='x',y='y')
+df.count.iplot(kind='bar')
+df['c'].iplot(kind='hist')
+df[['a','b']].iplot(kind='spread')
+df.iplot(kind='bubble',x='a',y='b',size='c')
+
+
+https://github.com/santosjorge/cufflinks
