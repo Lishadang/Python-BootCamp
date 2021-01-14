@@ -1,0 +1,55 @@
+import pandas as pd
+import plotly.plotly as py
+import plotly.offline as po
+import plotly.graph_objs as go
+%matplotlib inline
+
+po.init_notebook_mode(connected=True)
+agri=pd.read_csv('agri.csv')
+agri.head()
+
+data=dict(type='choropleth',
+locations=['AK','AZ','AR','AL','CA'],
+locationmode="USA-states",z=[1,3,34,5,67],
+text=['alabama','alaska','arizona','pugger','california'])
+layout=dict(geo={'scope':'usa'})
+x=pg.Figure(data=[data],layout=layout)
+po.iplot(x)
+
+
+Plot with big data
+agri=pd.read_csv('agri.csv')
+agri.head()
+data=dict(type='choropleth',
+  locations=agri['code'],
+  locationmode="USA-states",
+  z=agri['total exports'],
+  text=agri['text'],
+  colorscale='Fortland',
+  colorbar=('title':'colorbar'))
+layout=dict(title='AGRI PLOT',geo=dict(scope':'usa',showlakes=True))
+x=pg.Figure(data=[data],layout=layout)
+po.iplot(x)
+
+
+#Global Scale plot
+import pandas as pd
+import plotly.plotly as py
+import plotly.offline as po
+import plotly.graph_objs as go
+%matplotlib inline
+
+po.init_notebook_mode(connected=True)
+gdp=pd.read_csv('gdp.csv')
+gdp.head()
+data=dict(type='chloropleth'
+  locations=gdp['CODE'],
+  z=gdp['GDP (BILLIONS)'],
+  text=gdp['COUNTRY']
+  )
+layout=dict(title='GDP geo-plot', geo=dict{showframe=False, projection={'type':'hammer'/'natural earth'/'marcator'/'stereographic'}})
+x=pg.Figure(data=[data],layout=layout)
+po.iplot(x)
+
+
+https://geopandas.org/
