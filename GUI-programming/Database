@@ -1,0 +1,70 @@
+Creating table in default database
+5step way
+
+c=Connection
+c=cursor
+execute
+c=Commit
+c=close
+
+Focusing on , and ?
+? for local/default database
+
+Functions usage
+import sqlite3
+
+def createtable():
+    conn=sqlite3.connect('lite.db')
+    cur =conn.cursor()
+
+    cur.execute("CREATE TABLE data( rollno INTEGER, name TEXT, marks REAL) ")
+    
+    conn.commit()
+    conn.close()
+    
+createtable()
+
+Creating table in PostgreSql
+select
+createtable
+
+pip install psycopg2
+import psycopg2
+
+def createtable():
+    conn=psycopg2.connect("dbname='data2' user='postgres' password='postgres' port='5432' host='localhost'")
+    cur =conn.cursor()
+
+    cur.execute("CREATE TABLE data( rollno INTEGER, name TEXT, marks REAL) ")
+    
+    conn.commit()
+    conn.close()
+
+createtable()
+
+#Inserting
+def insertable(roll,nam,mark):
+  cur.execute("INSERT INTO data VALUES(%s,%s.%s)",(roll,nam,mark))
+insert(4,'pugghero',100)
+
+def insertable(roll,nam,mark):
+  cur.execute("INSERT INTO data VALUES(?,?,?)",(roll,nam,mark))
+insert(4,'pugghero',100)
+
+#Viewing
+def view():
+  cur.execute("SELECT * FROM data")
+  rows=cur.fetchall()
+  return rows
+print(view)
+
+
+#Deleting
+def delete(roll):
+  cur.execute("DELETE FROM data where rollno=?",(roll,))
+delete(5)
+
+#Updating
+def update(nam,mark,roll):
+  cur.execute("UPDATE data SET name=?,marks=? where roll=?",(nam,mark,roll))
+update('puggie',90,3)
